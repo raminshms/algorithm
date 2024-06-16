@@ -4,7 +4,7 @@ def makeSquares(sortedArr):
     l = 0
     r = n - 1
     index = n - 1
-    while l < r:
+    while l <= r:
         leftSquare = sortedArr[l] * sortedArr[l]
         rightSquare = sortedArr[r] * sortedArr[r]
 
