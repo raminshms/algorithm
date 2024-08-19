@@ -4,8 +4,8 @@ def maxArea(height):
     mostWater = 0
     while l < r:
         h = min(height[l], height[r])
-        length = r - l
-        mostWater = max(mostWater, h*length)
+        width = r - l
+        mostWater = max(mostWater, h*width)
 
         if height[l] <= height[r]:
             l += 1
