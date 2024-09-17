@@ -1,15 +1,14 @@
 def intersection(nums1, nums2):
-    numsMap = {}
-    isArr1Bigger = len(nums1) >= len(nums2)
+    hashMap = {}
 
-    for n in nums1 if isArr1Bigger else nums2:
-        numsMap[n] = 1
+    for n in nums1:
+        hashMap[n] = 1
 
     res = []
-    for n in nums2 if isArr1Bigger else nums1:
-        if n in numsMap:
-            del numsMap[n]
+    for n in nums2:
+        if n in hashMap:
             res.append(n)
+            del hashMap[n]
 
     return res
 
